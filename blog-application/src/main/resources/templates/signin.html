@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <title>My Blog App</title>
+	    <link rel="stylesheet" href="style.css/signin.css">
+	    
+	    
+	</head>
+	<body>
+	<section>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+
+  <form action="#" th:action="@{/do_register}" method="post"  th:object="${user}">
+
+    <!-- Name -->
+    <label>Full Name</label><br>
+    <input name="name" type="text"  placeholder="Enter your name" required
+    th:value="${user.name}">
+    <br><br>
+
+    <!-- Email -->
+    <label>Email</label><br>
+    <input name="email" type="email" th:field="*{email}" placeholder="Enter your email" required
+     th:value="${user.email}">
+    <br><br>
+
+    <!-- Password -->
+    <label>Password</label><br>
+    <input name="password" type="password" th:field="*{password}" placeholder="Enter password" required
+     th:value="${user.password}">
+    <br><br>
+
+    <!-- Confirm Password -->
+    <label>About</label><br>
+    <input name="about" type="text" th:field="*{about}" placeholder="Confirm password" required
+     th:value="${user.about}">
+    <br><br>
+
+    <!-- Gender -->
+    <label>Gender</label><br>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female
+    <br><br>
+
+    <!-- Submit -->
+    <button type="submit">Register</button>
+
+  </form>
+
+</body>
+</html>
+	
+   </div>
+   </section>
+   </body>
+   </html>
+   

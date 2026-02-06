@@ -1,0 +1,97 @@
+.arti{
+  width: 100%;
+  height: 128vh;
+  background: url("../img/createblog.jpg") center/cover no-repeat;
+
+  /* 🔥 THIS CENTERS THE FORM */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.form-container{
+  width: 100%;          /* thoda aur choda */
+  max-width: 1000px;   /* pehle 800px tha */
+  padding: 2rem;
+}
+
+
+/* Heading */
+.form-container h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Inputs and textarea */
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="file"],
+.form-group textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 1rem;
+}
+
+/* Input focus effect */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #3b82f6; /* blue border on focus */
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.3);
+}
+
+/* Submit button */
+.submit-btn button {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.submit-btn button:hover {
+  background-color: #2563eb;
+}
+textarea {
+  height: 300px;       /* sets fixed height */
+  min-height: 150px;   /* minimum height */
+  max-height: none;    /* no maximum limit */
+  resize: vertical;    /* user can resize vertically */
+}
+.form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 800px;  /* increase from 500px to 800px */
+  margin: 0 auto;    /* center the form */
+}
+

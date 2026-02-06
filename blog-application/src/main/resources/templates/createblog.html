@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="home::Layout(~{::section})">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Blog</title>
+  <link rel="stylesheet" href="css/create.css"> 
+</head>
+<body>
+<section>
+<div class="arti">
+<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">			
+  <div class="form-container">
+    <h1>Create Blog Post</h1>
+    <form action="#" th:action="@{/create_content}" method="post"  th:object="${blogpost}">
+      <!-- Title -->
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input name=title type="text" id="title" placeholder="Enter blog title"
+         >
+      </div>
+
+      <!-- Content -->
+      <div class="form-group">
+        <label for="content">Content</label>
+        <textarea name="content" id="content" rows="6" placeholder="Write your blog content here..."></textarea>
+      </div>
+
+      <!-- Publish Date -->
+      <div class="form-group">
+        <label for="publishDate">Publish Date</label>
+        <input name=publishDate type="date" id="publishDate">
+      </div>
+
+      <!-- Image Upload -->
+      <div class="form-group">
+        <label for="image">Upload Image</label>
+        <input name=image type="file" id="image" accept="image/*">
+      </div>
+
+      <!-- Submit -->
+      <div class="form-group submit-btn">
+        <button type="submit">Create Blog</button>
+      </div>
+      
+    </form>
+    
+  </div>
+  </div>
+  </div>
+  </section>
+</body>
+</html>
+

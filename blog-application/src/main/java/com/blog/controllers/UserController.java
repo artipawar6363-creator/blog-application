@@ -14,6 +14,7 @@ import com.blog.dao.PostRepository;
 import com.blog.dao.UserRepository;
 import com.blog.entities.Blogpost;
 import com.blog.entities.User;
+
 @Controller
 public class UserController {
 	
@@ -33,22 +34,23 @@ public class UserController {
 		{
 			model.addAttribute("title","blog-application");
 			model.addAttribute("user",new User());
-		return "signin";	
+			return "signin";	
 		}
 		@RequestMapping("/login")
 		public String login(Model model)
 		{
 			model.addAttribute("title","blog-application");
-		return "login";	
+			return "login";	
 		}
 		
 		@PostMapping("/do_register") 
-			public String registerUser(@ModelAttribute("user") User user)
-			{
-				System.out.println("User" + user);
-				User result = this.userRepository.save(user);
-				return "signin";
-			}
+		public String registerUser(@ModelAttribute("user") User user)
+		{
+			System.out.println("User" + user);
+			User result = this.userRepository.save(user);
+			return "signin";
+		}
+		
 		@RequestMapping("/view") 
 		public String viewpage ()
 		{
@@ -57,6 +59,7 @@ public class UserController {
 		}
 		@RequestMapping("/createblog")
 		public String createblog () {
+			System.out.println("This is create Blog");
 			return "createblog";
 		}
 		
